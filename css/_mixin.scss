@@ -1,0 +1,8 @@
+@mixin hide-text {
+    text-indent: 101%;
+    overflow:hidden;
+    white-space: nowrap;
+}
+@mixin linkline {
+    text-decoration: none;
+}

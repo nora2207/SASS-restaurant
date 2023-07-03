@@ -1,0 +1,283 @@
+/*--------------- desktop 首頁部分 ---------------*/
+/* 好吃秘訣 */
+.desktop-content{
+    background: $bg-color-medium;
+    color: $word-color-main;
+    padding: 42px;
+    line-height: $line-height-s;
+    margin: 0 auto;
+    h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: $line-height-b;
+    position: relative;
+  }
+}
+  .desktop-content h2:before,.desktop-content h2:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: #979797;
+    width: 12%;
+    height: 1px;
+  }
+  .desktop-content h2:before{
+    left: 26%;
+  }
+  .desktop-content h2:after{
+    right: 26%;
+  }
+  @media(max-width: 768px){
+    .desktop-content h2:before,.desktop-content h2:after{
+      width: 15%;
+    }
+    .desktop-content h2:before{
+      left: 19%;
+    }
+    .desktop-content h2:after{
+      right: 19%;
+    }
+  }
+  @media(max-width: 767px){
+    .desktop-content{
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    .desktop-content h2:before,.desktop-content h2:after{
+      display: none;
+    }
+  }
+  .content-feature{
+    display: flex;
+    justify-content: space-around;
+  }
+  .content-feature-item{
+    max-width: 200px;
+  }
+  .content-feature-item img{
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  .content-feature-item h3{
+    text-align: center;
+    margin: 15px 0;
+  }
+  @media(max-width: 768px){
+    .desktop-content{
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+  @media(max-width: 767px){
+    .content-feature{
+      display: block;
+    }
+    .content-feature-item{
+      margin: 0 auto;
+      width: 98%;
+    }
+    .content-feature-item p{
+      margin-bottom: 30px;
+    }
+  }
+  /* 今日主廚 */
+  .desktop-chef{
+    background: $bg-color-dark;
+    color: #efe9e7;
+    display: flex;
+    padding-left: 42px;
+    padding-right: 42px;
+    line-height: 1.2;
+  }
+  .today-chef{
+    max-width: 390px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .today-chef h2{
+    font-size: 20px;
+  }
+  .today-chef h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  @media(max-width: 768px){
+    .desktop-chef{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .desktop-chef img{
+      width: 373px;
+      height: 460px;
+    } 
+    .today-chef{
+      max-width: 330px;
+      margin-left: 30px;
+    }
+  }
+  @media(max-width: 767px){
+    .desktop-chef{
+      display: block;
+      padding: 0;
+    }
+    .today-chef{
+      width: 300px;
+      margin: 0 auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  /* 別人感想 */
+  .desktop-feedback{
+    background: $bg-color-medium;
+    color: $word-color-main;
+    padding: 42px;
+    line-height: $line-height-m;
+  }
+  .desktop-feedback h2{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .feedback-list{
+    display: flex;
+    justify-content: space-between;
+  }
+  .feedback-list-item{
+    max-width: 290px;
+    display: flex;
+  }
+  .feedback-list-item img{
+    display: block;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .feedback-list-item h3{
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+  .feedback-list-item h4{
+    float: right;
+    margin-top: 20px;
+    opacity: 0.75;
+  }
+  @media(max-width: 768px){
+    .desktop-feedback{
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+    .feedback-list-item{
+      width: 230px;
+    }
+  }
+  @media(max-width: 767px){
+    .desktop-feedback{
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+    .feedback-list{
+      display: block;
+    }
+    .feedback-list-item{
+      width: 98%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* 地圖訂位 */
+  .desktop-map{
+    padding: 50px 42px 30px 42px;
+    color: $word-color-main;
+    background: $bg-color-bright;
+  }
+  .desktop-map h2{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: $line-height-s;
+  }
+  .map-form{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  .map-form img{
+    max-width: 460px;
+  }
+  .map-form-text{
+    width: 460px;
+    position: relative;
+  }
+  .form-text-item input{
+    width: 100%;
+    height: 32px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    padding-left: 10px;
+  }
+  .map-form-text .block{
+    display: block;
+    margin-top: 5px;
+  }
+  .map-form-text .block input{
+    margin-right: 35px;
+  }
+  .form-text-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .form-text-btn-cancel{
+    background: gray;
+    color: $word-color-w;
+    border: none;
+    width: 70px;
+    height: 32px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  .form-text-btn-submit{
+    background: #f56c23;
+    color: #fff;
+    border: none;
+    width: 70px;
+    height: 32px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  @media(max-width: 768px){
+    .desktop-map{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .map-form img{
+      height: 386px;
+      width: 48%;
+    }
+    .map-form-text{
+      width: 48%;
+    }
+  }
+  @media(max-width: 767px){
+    .map-form{
+      display: block;
+      margin-bottom: 20px;
+    }
+    .map-form img{
+      width: 100%;
+    }
+    .map-form-text{
+      width: 100%;
+      margin-top: 20px;
+      padding-bottom: 60px;
+    }
+  }

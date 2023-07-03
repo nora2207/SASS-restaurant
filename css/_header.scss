@@ -1,0 +1,128 @@
+  /* 共通布局 */
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+  a{
+    @include linkline;
+  }
+  .clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  /* banner導覽列 */
+  .banner{
+    background-image: url(/images/header_desktop.png);
+    height: 420px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include phone(){
+      background-image: url(/images/header_mobile.png);
+    }
+  }
+  .header{
+    height: 56px;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 42px;
+    position: relative;
+    @include pad(){
+      padding-right: 2%;
+      padding-left: 3%;
+    }
+  }
+  .logo{
+    background-image: url(/images/logo_w@svg.svg);
+    width: 120px;
+    height: 24px;
+    @include hide-text;  
+  }
+  .nav-bar{
+    float: right;
+  }
+  .nav li{
+    float: left;
+    @include pad767(){
+      float: none;
+      text-align: center;
+      border-top: 1px dashed gray;
+    }
+    a{
+      color: #fff;
+      display: block;
+      padding: 1em;
+      @include pad767(){
+        transition: all 0.3s;
+      }
+    }
+    a:hover{
+      color: $linkcolor;
+      @include pad767(){
+        background: $linkcolor;
+        color: #fff;
+      }
+    }
+  }
+  .showmenu{
+    display: none;
+    @include pad767(){
+      display: block;
+      font-size: 30px;
+      color: $word-color-w; 
+      float: right;
+      padding: 12px;
+    }
+  }
+  .nav{
+    @include pad767(){
+      max-height: 0px; 
+      overflow: hidden;
+      transition: max-height 1s;
+      position: absolute;
+      z-index: 100;
+      top: 56px;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.85);
+    }
+  }
+  .menu-show .nav{
+    @include pad767(){
+      max-height: 500px;
+      }
+  }
+  .title{
+    color: $word-color-w;
+    max-width: 460px;
+    background-color: rgba(0,0,0,0.35);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 75px;
+  }
+  .title h1{
+    font-size: 36px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    span{
+      @include phone(){
+        display: block;
+        padding-top: 10px;
+      }
+    }
+  }
+  .title p{
+    font-size: 16px;
+    line-height: $line-height-m;
+    padding-bottom: 20px;
+  }
+  .fa-sharp{
+    padding-left: 5px;
+    padding-right: 5px;
+  }

@@ -1,0 +1,88 @@
+ /* 表尾 */
+.footer{
+  background: #efe9e7;
+  color: $word-color-main;
+  padding: 35px 42px 20px 42px;
+  display: flex;
+  justify-content: space-between;
+  h2{
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  @include pad(){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include phone(){
+    display: block;
+  }
+}
+.footer-about{
+  width: 280px;
+  line-height: $line-height-s;
+  @include pad(){
+    width: 30%;
+  }
+  @include phone(){
+    width: 100%;
+  }
+}
+.footer-connect{
+  width: 300px;
+  margin-left: 20px;
+  h2{
+    padding-top: 3px;
+    @include phone(){
+      margin-top: 50px;
+    }
+  }
+  ul{
+    margin-top: 18px;
+    @include phone(){
+      margin-left: 18px;
+    }
+  }
+  li{
+    list-style: disc;
+    line-height: $line-height-s;
+  }
+  @include pad(){
+    width: 30%;
+  }
+  @include phone(){
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.footer-link{
+  width: 300px;
+  h1{
+    font-size: 48px;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: right;
+    margin-top: 15px;
+  }
+  ul{
+    font-size: 31px;
+    display: flex;
+    justify-content: end;
+  }
+  li{
+    margin: 25px 5px;
+  }
+  @include phone(){
+    width: 100%;
+    text-align: right;
+    margin-top: 30px;
+  }
+}
+.icon-google{
+  color: #db4437;
+  }
+.icon-twiter{
+  color: #41abe1;
+  }
+.icon-facebook{
+  color: #3a5795;
+  }
